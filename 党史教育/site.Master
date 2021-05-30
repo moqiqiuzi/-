@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="党史教育.site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    	<style type="text/css">
+		*{
+    		margin:0px auto;
+			/*height: auto;*/
+    		padding:0px;
+    		border:0px;
+		}
+		
+		.topbar{
+			/*background: rgba(130,160,160,50%);*/
+            width:100%;
+    	    max-width:1222px;
+			height: 27px;
+			line-height: 27px;
+            padding-right:80px;
+			border-bottom: solid 1px #DCDCDC;
+		}
+
+    	.header {
+             background-image: url("img/ph_top.jpg");
+             background-repeat:no-repeat;
+             background-size:100% 100%;
+             width:100%;
+    	     max-width:1222px;
+             height:380px;
+    	}
+		
+		nav {
+			background-color:#ba261a;
+            width:100%;
+    	    max-width:1222px;
+			height: 48px;
+		}
+		
+		nav li{
+			float: left;
+            position: relative;
+            padding: 0px 57px;
+            z-index: 2;
+            list-style-type: none;
+            font-size:16px;
+		}
+		
+		nav li:hover{
+			text-decoration-line: underline;
+		}
+		
+		nav li a{
+			display: block;
+			padding-left: 1.5em;
+			color: #fef0c2;
+            text-decoration-line: none;
+            text-align:center;
+            padding-top:10px;
+		}
+		
+		.container{
+            width:100%;
+    	    max-width:1222px;
+            /*height:1000px;*/
+			/*background-color:#f8e4dd;*/
+			padding-top: 15px;
+            overflow: hidden;
+		}
+		
+		.footer{
+            width:100%;
+    	    max-width:1222px;
+			height: 32px;
+			background-color: black;
+			margin-top: 5px;
+			color: #cdcdcd;
+			text-align: center;
+		}
+		
+		button{
+			width: 66px;
+			background-color: rgba(2,2,2,0%);
+			color: aliceblue;
+		}
+		
+		ol li a{
+			color: black;
+			text-decoration: none;
+		}
+		
+		ol li:hover{
+			color: crimson;
+		}
+		
+		ol li a:hover{
+			color: crimson;
+		}
+	</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div class="header">
+		<div class="topbar"><button style="float: right">登录</button><button style="float: right">注册</button></div>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="home.aspx">首页</a></li>
+			<li><a href="links.aspx?typeid=1">要闻要论</a></li>
+			<li><a href="links.aspx?typeid=2">党史百年</a></li>
+			<li><a href="links.aspx?typeid=3">纪念活动</a></li>
+			<li><a href="links.aspx?typeid=4">浙江印记</a></li>
+            <li><a href="links.aspx?typeid=5">党建视窗</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+        <div style="width: 18%;border:1px solid #e6dfcd;float:left;margin-left: 1.5%;margin-top:18px;display: block;padding: 30px">
+		要闻要论<br />
+		<asp:Literal ID="Literal1" runat="server"></asp:Literal><br />
+        党史百年<br />
+        <asp:Literal ID="Literal2" runat="server"></asp:Literal><br />
+        纪念活动<br />
+        <asp:Literal ID="Literal3" runat="server"></asp:Literal><br />
+        浙江印记<br />
+        <asp:Literal ID="Literal4" runat="server"></asp:Literal><br />
+        党建视窗<br />
+        <asp:Literal ID="Literal5" runat="server"></asp:Literal>
+		</div>
+        <div style="width: 73%;border:1px solid #e6dfcd;float:right;margin-right:10px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        </div>
+	<div class="footer">copyright@党史教育</div>
+    </form>
+</body>
+</html>
